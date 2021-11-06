@@ -25,18 +25,18 @@ export const AnimalList = () => {
     }
 
     return (
-        <>
-            <AnimalSearch onSearchTermChange={onSearchTermChange} searchTerm={searchTerm} />
-            <div style={{ marginTop: "2rem"}}>
-                <button onClick={() => history.push("/animals/create")}>
-                    Make Reservation
-                </button>
-                <div className="animals">
-                    {
-                        animals.map(animal => <Animal key={animal.id} animal={animal} />)
-                    }
-                </div>
+    <>
+        <AnimalSearch onSearchTermChange={onSearchTermChange} searchTerm={searchTerm} />
+        <div style={{ marginTop: "2rem"}}>
+            <button onClick={() => history.push("/animals/create")}>
+                Make Reservation
+            </button>
+            <div className="animals">
+                {
+                    animals.map(animal => <Animal key={animal.id} animal={animal} />)
+                }
             </div>
-        </>
+        </div>
+    </>
     )
 }

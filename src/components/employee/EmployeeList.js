@@ -20,7 +20,7 @@ export const EmployeeList = () => {
             </button>
 
             <article className="employees">
-                {
+                { employees.length ?
                     employees.map(employee => {
                         return <section className="employee" key={employee.id}>
                             <Link to={`/employees/${employee.id}`}>
@@ -28,6 +28,7 @@ export const EmployeeList = () => {
                             </Link>
                         </section>
                     })
+                    : <p>No employees to diplay</p>
                 }
             </article>
         </div>

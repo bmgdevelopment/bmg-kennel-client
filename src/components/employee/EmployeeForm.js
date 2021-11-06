@@ -31,7 +31,7 @@ export const EmployeeForm = () => {
             but rather `.current.value` now in React.
         */
         const location_id = parseInt(location.current.value)
-        const animalId = parseInt(animal.current.value)
+        const animal_id = parseInt(animal.current.value)
 
         if (location_id === 0) {
             window.alert("Please select a location")
@@ -39,7 +39,7 @@ export const EmployeeForm = () => {
             addEmployee({
                 name: name.current.value,
                 location_id,
-                animalId
+                animal_id
             })
             .then(() => history.push("/employees"))
         }
