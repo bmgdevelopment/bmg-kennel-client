@@ -17,7 +17,7 @@ export const ApplicationViews = () => {
                 <LocationList />
             </Route>
 
-            <Route path="/locations/:locationId(\d+)">
+            <Route path="/locations/:location_id(\d+)">
                 <LocationDetail />
             </Route>
 
